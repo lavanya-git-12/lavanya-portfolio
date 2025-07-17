@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function typeChar() {
             if (charIndex < currentLine.text.length) {
                 if (currentLine.isLink) {
-                    p.innerHTML = <span class="prompt">></span> <a href="#" class="terminal-link">${currentLine.text}</a>
+                 p.innerHTML = `<span class="prompt">></span> <a href="#" class="terminal-link">${currentLine.text}</a>`;
                     charIndex = currentLine.text.length; // Skip typing for link
                 } else {
                     p.innerHTML += currentLine.text.charAt(charIndex);
