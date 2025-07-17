@@ -37,3 +37,7 @@ steps:
 # Define the single image to be pushed to Artifact Registry
 images:
   - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
+
+options:
+ logging: CLOUD_LOGGING_ONLY
+
