@@ -1,39 +1,39 @@
-s Cloud Build pipeline builds and deploys the single portfolio service.
+# This Cloud Build pipeline builds and deploys the single portfolio service.
 
 steps:
-    # 1. Build and push the frontend image
-    #   - name: 'gcr.io/cloud-builders/docker'
-    #       id: 'Build Frontend'
-    #           args:
-    #                 - 'build'
-    #                       - '-t'
-    #                             - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
-    #                                   - './frontend-service'
-    #
-    #                                     - name: 'gcr.io/cloud-builders/docker'
-    #                                         id: 'Push Frontend'
-    #                                             args:
-    #                                                   - 'push'
-    #                                                         - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
-    #
-    #                                                           # 2. Deploy the frontend service. It is now completely self-contained.
-    #                                                             - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    #                                                                 id: 'Deploy Frontend'
-    #                                                                     waitFor: ['Push Frontend']
-    #                                                                         entrypoint: 'gcloud'
-    #                                                                             args:
-    #                                                                                   - 'run'
-    #                                                                                         - 'deploy'
-    #                                                                                               - 'frontend-service'
-    #                                                                                                     - '--image'
-    #                                                                                                           - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
-    #                                                                                                                 - '--region'
-    #                                                                                                                       - '${_REGION}'
-    #                                                                                                                             - '--platform'
-    #                                                                                                                                   - 'managed'
-    #                                                                                                                                         - '--allow-unauthenticated'
-    #                                                                                                                                               # No more backend URLs or database connections needed!
-    #
-    #                                                                                                                                               # Define the single image to be pushed to Artifact Registry
-    #                                                                                                                                               images:
-    #                                                                                                                                                 - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
+  # 1. Build and push the frontend image
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Build Frontend'
+    args:
+      - 'build'
+      - '-t'
+      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
+      - './frontend-service'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'Push Frontend'
+    args:
+      - 'push'
+      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
+
+  # 2. Deploy the frontend service. It is now completely self-contained.
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'Deploy Frontend'
+    waitFor: ['Push Frontend']
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'frontend-service'
+      - '--image'
+      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
+      - '--region'
+      - '${_REGION}'
+      - '--platform'
+      - 'managed'
+      - '--allow-unauthenticated'
+      # No more backend URLs or database connections needed!
+
+# Define the single image to be pushed to Artifact Registry
+images:
+  - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
