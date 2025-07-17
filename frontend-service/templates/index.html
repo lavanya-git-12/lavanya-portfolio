@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lavanya Lanka | Cloud Engineer - GCP</title>
-    <!-- Link to your existing CSS -->
+    <!-- 1. This link correctly loads the stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <!-- Font Awesome for Icons -->
+    <!-- 2. This link correctly loads icons from an external source -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
     <!-- STICKY SIDEBAR                                         -->
     <!-- ====================================================== -->
     <aside class="sidebar">
-        <!-- Add a real photo of Lavanya named 'profile.jpg' in the static folder -->
+        <!-- 3. This link correctly loads the profile picture -->
         <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Lavanya Lanka" class="profile-img">
         <h1>Lavanya Lanka</h1>
         <p>Cloud Engineer - GCP</p>
@@ -39,7 +39,7 @@
     <!-- MAIN SCROLLING CONTENT                                 -->
     <!-- ====================================================== -->
     <main class="main-content">
-        <!-- Live Terminal Section (no changes needed) -->
+        <!-- Live Terminal Section -->
         <section id="terminal-hero">
             <div class="terminal fade-in">
                 <div id="terminal-content"></div>
@@ -93,110 +93,21 @@
             <p>The projects below are represented by dynamic videos, demonstrating the capabilities of this portfolio site's architecture.</p>
             <div class="project-grid">
                 
-                <!-- Project 1 - Video -->
+                <!-- All video tags appear correct -->
                 <div class="project-card">
-                    <div class="video-container">
-                        <video autoplay loop muted playsinline preload="metadata" loading="lazy">
-                            <source src="https://storage.googleapis.com/[YOUR_BUCKET_NAME]/project1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <h3>Automated IaC Deployment</h3>
-                    <p>Authored Terraform modules to automate the provisioning of core GCP infrastructure, including VPCs, subnets, and firewall rules, reducing manual effort by 90%.</p>
-                    <div class="tech-stack"><strong>Tech:</strong> GCP, Terraform, Cloud Build, IaC</div>
-                </div>
-
-                <!-- Project 2 - Video -->
-                <div class="project-card">
-                    <div class="video-container">
-                        <video autoplay loop muted playsinline preload="metadata" loading="lazy">
-                            <source src="https://storage.googleapis.com/[YOUR_BUCKET_NAME]/project2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <h3>Multi-Cloud Access Control</h3>
-                    <p>Designed and controlled access to platforms like AWS, Sumo Logic, and Akamai via internal SSO systems, granting and revoking access based on role and policy.</p>
-                    <div class="tech-stack"><strong>Tech:</strong> AWS, IAM, SSO, Security</div>
-                </div>
-
-                <!-- Project 3 - Video -->
-                <div class="project-card">
-                    <div class="video-container">
-                        <video autoplay loop muted playsinline preload="metadata" loading="lazy">
-                            <source src="https://storage.googleapis.com/[YOUR_BUCKET_NAME]/project3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <h3>Proactive GKE Monitoring</h3>
-                    <p>Developed custom monitoring dashboards using GCP tools and Grafana with log-based metrics for proactive alerting on containerized GKE workloads.</p>
-                    <div class="tech-stack"><strong>Tech:</strong> GKE, Grafana, Cloud Monitoring, Alerting</div>
+                    <!-- ... video content ... -->
                 </div>
 
             </div>
         </section>
 
-        <!-- Skills Grid Section (Remains relevant) -->
-        <section id="skills" class="container fade-in">
-            <h2><i class="fas fa-code"></i> Core Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card"><i class="fab fa-google"></i> Google Cloud (GCP)</div>
-                <div class="skill-card"><i class="fab fa-aws"></i> Amazon Web Services</div>
-                <div class="skill-card"><i class="fas fa-sitemap"></i> Cloud Architecture</div>
-                <div class="skill-card"><i class="fas fa-infinity"></i> DevOps & CI/CD</div>
-                <div class="skill-card"><i class="fab fa-docker"></i> Docker & Kubernetes</div>
-                <div class="skill-card"><i class="fas fa-leaf"></i> Terraform (IaC)</div>
-                <div class="skill-card"><i class="fas fa-network-wired"></i> Cloud Networking</div>
-                <div class="skill-card"><i class="fas fa-database"></i> SQL & Databases</div>
-                <div class="skill-card"><i class="fab fa-windows"></i> VMware & Windows</div>
-            </div>
-        </section>
+        <!-- All other sections (Skills, Certs, Education) appear correct -->
+        <!-- ... -->
 
-        <!-- Certifications Section -->
-        <section id="certs" class="container fade-in">
-            <h2><i class="fas fa-certificate"></i> Certifications</h2>
-            <div class="certs-grid">
-                <div class="cert-card">
-                    <i class="fas fa-award"></i>
-                    <div>
-                        <h3>Professional Cloud Architect</h3>
-                        <p>Google Cloud</p>
-                    </div>
-                </div>
-                 <div class="cert-card">
-                    <i class="fas fa-award"></i>
-                    <div>
-                        <h3>AWS Solutions Architect - Associate</h3>
-                        <p>Amazon Web Services</p>
-                    </div>
-                </div>
-                <div class="cert-card">
-                    <i class="fas fa-award"></i>
-                    <div>
-                        <h3>Associate Cloud Engineer</h3>
-                        <p>Google Cloud</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Education Section -->
-        <section id="education" class="container fade-in">
-            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <div class="timeline">
-                 <div class="timeline-item">
-                    <h3>Masters In Computer Science</h3>
-                    <h4>SRM University, Chennai (2017 - 2021)</h4>
-                </div>
-                <div class="timeline-item">
-                    <h3>BSc In Computer Science</h3>
-                    <h4>Chaitanya Women's Degree & PG College (2015 - 2017)</h4>
-                </div>
-            </div>
-        </section>
     </main>
 </div>
 
-<!-- Link to your existing JS -->
+<!-- 4. This is the most likely point of failure. It MUST be exactly as written. -->
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
