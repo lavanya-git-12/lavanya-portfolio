@@ -7,14 +7,14 @@ steps:
     args:
       - 'build'
       - '-t'
-      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
+      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/lavanya-portfolio/frontend-service:$SHORT_SHA'
       - './frontend-service'
 
   - name: 'gcr.io/cloud-builders/docker'
     id: 'Push Frontend'
     args:
       - 'push'
-      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
+      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/lavanya-portfolio/frontend-service:$SHORT_SHA'
 
   # 2. Deploy the frontend service. It is now completely self-contained.
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -26,7 +26,7 @@ steps:
       - 'deploy'
       - 'frontend-service'
       - '--image'
-      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
+      - '${_REGION}-docker.pkg.dev/$PROJECT_ID/lavanya-portfolio/frontend-service:$SHORT_SHA'
       - '--region'
       - '${_REGION}'
       - '--platform'
@@ -36,7 +36,7 @@ steps:
 
 # Define the single image to be pushed to Artifact Registry
 images:
-  - '${_REGION}-docker.pkg.dev/$PROJECT_ID/portfolio-repo/frontend-service:$SHORT_SHA'
+  - '${_REGION}-docker.pkg.dev/$PROJECT_ID/lavanya-portfolio/frontend-service:$SHORT_SHA'
 
 options:
  logging: CLOUD_LOGGING_ONLY
