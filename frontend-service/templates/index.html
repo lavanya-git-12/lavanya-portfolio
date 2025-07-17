@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavanya Lanka | Cloud Engineer - GCP</title>
+    <!-- Link to your existing CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="portfolio-container">
+    <!-- ====================================================== -->
+    <!-- STICKY SIDEBAR                                         -->
+    <!-- ====================================================== -->
+    <aside class="sidebar">
+        <!-- Add a real photo of Lavanya named 'profile.jpg' in the static folder -->
+        <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Lavanya Lanka" class="profile-img">
+        <h1>Lavanya Lanka</h1>
+        <p>Cloud Engineer - GCP</p>
+        <nav>
+            <ul>
+                <li><a href="#overview"><i class="fas fa-user-circle"></i> Overview</a></li>
+                <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#projects"><i class="fas fa-cogs"></i> Projects</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#certs"><i class="fas fa-certificate"></i> Certifications</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <p>Portfolio built with:</p>
+            <p>Flask, Docker, Cloud Run, Cloud Build</p>
+        </div>
+    </aside>
+
+    <!-- ====================================================== -->
+    <!-- MAIN SCROLLING CONTENT                                 -->
+    <!-- ====================================================== -->
+    <main class="main-content">
+        <!-- Live Terminal Section (no changes needed) -->
+        <section id="terminal-hero">
+            <div class="terminal fade-in">
+                <div id="terminal-content"></div>
+            </div>
+        </section>
+        
+        <!-- Overview Section -->
+        <section id="overview" class="container fade-in">
+            <h2><i class="fas fa-user-circle"></i> Professional Overview</h2>
+            <p>Experienced GCP Cloud Engineer with 4.6 years of experience in designing, developing, and deploying cloud-based solutions. Proven ability to manage cloud infrastructure, implement security control, and troubleshoot cloud-related issues. Seeking to contribute technical skills and innovative solutions in a dynamic environment, with a focus on optimizing cloud operations and enhancing security.</p>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="container fade-in">
+             <h2><i class="fas fa-briefcase"></i> Experience Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Cloud Architect | Project NOVA</h3>
+                    <h4>Cognizant Technology Solutions (Feb 2025 - Present)</h4>
+                    <ul>
+                        <li>Designed and deployed secure, high-availability, and cost-efficient cloud architectures on GCP.</li>
+                        <li>Leveraged IaC with Terraform and Cloud Deployment Manager for scalable and automated implementations.</li>
+                        <li>Enabled CI/CD pipelines using Cloud Build and GitLab CI to accelerate development cycles.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>GCP Tier III Cloud Engineer | Google Zelus Project</h3>
+                    <h4>Cognizant Technology Solutions (Aug 2023 - Feb 2025)</h4>
+                    <ul>
+                        <li>Architected and maintained production-grade systems, resolving complex issues across GCP.</li>
+                        <li>Gained significant experience in networking and compute infrastructure in virtualized environments.</li>
+                        <li>Engineered and deployed resilient containerized workloads on GKE using Terraform.</li>
+                        <li>Designed robust data migration pipelines from AWS to GCP using Datastream.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Systems Engineer | ITIL Project</h3>
+                    <h4>Cognizant Technology Solutions (Nov 2020 - July 2023)</h4>
+                    <ul>
+                        <li>Administered VMware vSphere 7 for provisioning, upgrading, and VDI tasks.</li>
+                        <li>Handled critical incidents (P2, P3) and service requests using ServiceNow.</li>
+                        <li>Gained extensive experience with AWS services like IAM, EC2, ALB, Route 53, and S3.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Video Projects Section -->
+        <section id="projects" class="container fade-in">
+            <h2><i class="fas fa-cogs"></i> Project Showcase</h2>
+            <p>The projects below are represented by dynamic videos, demonstrating the capabilities of this portfolio site's architecture.</p>
+            <div class="project-grid">
+                
+                <!-- Project 1 - Video -->
+                <div class="project-card">
+                    <div class="video-container">
+                        <video autoplay loop muted playsinline preload="metadata" loading="lazy">
+                            <source src="https://storage.googleapis.com/[YOUR_BUCKET_NAME]/project1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3>Automated IaC Deployment</h3>
+                    <p>Authored Terraform modules to automate the provisioning of core GCP infrastructure, including VPCs, subnets, and firewall rules, reducing manual effort by 90%.</p>
+                    <div class="tech-stack"><strong>Tech:</strong> GCP, Terraform, Cloud Build, IaC</div>
+                </div>
+
+                <!-- Project 2 - Video -->
+                <div class="project-card">
+                    <div class="video-container">
+                        <video autoplay loop muted playsinline preload="metadata" loading="lazy">
+                            <source src="https://storage.googleapis.com/[YOUR_BUCKET_NAME]/project2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3>Multi-Cloud Access Control</h3>
+                    <p>Designed and controlled access to platforms like AWS, Sumo Logic, and Akamai via internal SSO systems, granting and revoking access based on role and policy.</p>
+                    <div class="tech-stack"><strong>Tech:</strong> AWS, IAM, SSO, Security</div>
+                </div>
+
+                <!-- Project 3 - Video -->
+                <div class="project-card">
+                    <div class="video-container">
+                        <video autoplay loop muted playsinline preload="metadata" loading="lazy">
+                            <source src="https://storage.googleapis.com/[YOUR_BUCKET_NAME]/project3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <h3>Proactive GKE Monitoring</h3>
+                    <p>Developed custom monitoring dashboards using GCP tools and Grafana with log-based metrics for proactive alerting on containerized GKE workloads.</p>
+                    <div class="tech-stack"><strong>Tech:</strong> GKE, Grafana, Cloud Monitoring, Alerting</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Grid Section (Remains relevant) -->
+        <section id="skills" class="container fade-in">
+            <h2><i class="fas fa-code"></i> Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card"><i class="fab fa-google"></i> Google Cloud (GCP)</div>
+                <div class="skill-card"><i class="fab fa-aws"></i> Amazon Web Services</div>
+                <div class="skill-card"><i class="fas fa-sitemap"></i> Cloud Architecture</div>
+                <div class="skill-card"><i class="fas fa-infinity"></i> DevOps & CI/CD</div>
+                <div class="skill-card"><i class="fab fa-docker"></i> Docker & Kubernetes</div>
+                <div class="skill-card"><i class="fas fa-leaf"></i> Terraform (IaC)</div>
+                <div class="skill-card"><i class="fas fa-network-wired"></i> Cloud Networking</div>
+                <div class="skill-card"><i class="fas fa-database"></i> SQL & Databases</div>
+                <div class="skill-card"><i class="fab fa-windows"></i> VMware & Windows</div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certs" class="container fade-in">
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <h3>Professional Cloud Architect</h3>
+                        <p>Google Cloud</p>
+                    </div>
+                </div>
+                 <div class="cert-card">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <h3>AWS Solutions Architect - Associate</h3>
+                        <p>Amazon Web Services</p>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-award"></i>
+                    <div>
+                        <h3>Associate Cloud Engineer</h3>
+                        <p>Google Cloud</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education" class="container fade-in">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="timeline">
+                 <div class="timeline-item">
+                    <h3>Masters In Computer Science</h3>
+                    <h4>SRM University, Chennai (2017 - 2021)</h4>
+                </div>
+                <div class="timeline-item">
+                    <h3>BSc In Computer Science</h3>
+                    <h4>Chaitanya Women's Degree & PG College (2015 - 2017)</h4>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Link to your existing JS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
+
