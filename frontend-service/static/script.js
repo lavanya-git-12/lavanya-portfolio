@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const terminal = document.getElementById('terminal-content');
     const lines = [
         { text: 'lavanya-portfolio % gcloud run deploy frontend-service --platform=managed', speed: 50 },
-        { text: 'Deploying service [frontend-service] to project [lavanya-tiwary-portfolio]...', speed: 20, delay: 500 },
+        { text: 'Deploying service [frontend-service] to project [lavanya-lanka-portfolio]...', speed: 20, delay: 500 },
         { text: '✓ Uploading sources...', speed: 20, isSuccess: true },
         { text: '✓ Building container...', speed: 20, isSuccess: true },
         { text: '✓ Creating new revision...', speed: 20, isSuccess: true },
         { text: '✓ Routing traffic...', speed: 20, isSuccess: true },
         { text: 'Done. Deployed service [frontend-service] to: ' , speed: 20, delay: 200},
-        { text: 'https://frontend-service-xxxxxxxx-uc.a.run.app', speed: 50, isLink: true },
+        { text: 'https://lavanyalanka.com', speed: 50, isLink: true },
         { text: ' ', speed: 1, delay: 500 },
         { text: 'lavanya-portfolio % Welcome to my portfolio!', speed: 50}
     ];
